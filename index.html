@@ -1,60 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Наша команда</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>Про команду</span>
-      <h1>Джуни-Підсніжники</h1>
-      <p class="tagline">
-        Невеликий але злагоджений колектив, який створює додатки з душею.
-      </p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">My Logo</div>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#why-choose-us">Why Choose Us</a></li>
+                <li><a href="#team">Team Members</a></li>
+                <li><a href="#features">Key Features</a></li>
+            </ul>
+            <button class="theme-toggle">Toggle Theme</button>
+        </nav>
+        <h1>Welcome to Our Team</h1>
+        <p>Your success is our mission. Learn more about us!</p>
     </header>
-
-    <div class="divider"></div>
-
-    <div class="grid">
-      <div class="card">
-        <div class="avatar">ПБ</div>
-        <div class="info">
-          <div class="name">Павло Буйлін</div>
-          <div class="role">Frontend-розробник</div>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a dedicated team committed to excellence.</p>
+    </section>
+    <section id="why-choose-us">
+        <h2>Why Choose Us</h2>
+        <p>Discover the advantages of working with our team.</p>
+    </section>
+    <section id="team">
+        <h2>Team Members</h2>
+        <div class="team-cards">
+            <!-- Existing team member cards go here -->
         </div>
-        <p class="bio">
-          Верстає піксель у піксель. React, TypeScript та анімації – його зона комфорту.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="avatar">ВЧ</div>
-        <div class="info">
-          <div class="name">Володимир Чорнобук</div>
-          <div class="role">Mobile-розробник</div>
-        </div>
-        <p class="bio">
-          Swift та Kotlin – рідні мови. Перетворює складні ідеї на прості та швидкі мобільні рішення.
-        </p>
-      </div>
-
-       <div class="grid">
-      <div class="card">
-        <div class="avatar">ДВ</div>
-        <div class="info">
-          <div class="name">Дмитро Войтков</div>
-          <div class="role">Backend-розробник</div>
-        </div>
-        <p class="bio">
-          Java-розробник в душі, який успішно підкорює React та TypeScript. Вірю, що мова - це інструмент, а головне - здатність знаходити ефективне рішення для будь-якої задачі
-        </p>
-      </div>
-
-    </div>
-  </body>
+    </section>
+    <section id="features">
+        <h2>Key Features</h2>
+        <p>Explore features that set us apart.</p>
+    </section>
+    <section id="cta">
+        <h2>Get in Touch</h2>
+        <button class="cta-button">Contact Us</button>
+    </section>
+    <footer>
+        <p>&copy; 2026 My Company. All Rights Reserved.</p>
+    </footer>
+</body>
 </html>
