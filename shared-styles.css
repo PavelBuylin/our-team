@@ -1,0 +1,89 @@
+:root {
+    /* Light Theme Variables */
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #ffffff;
+    --text-color: #212529;
+
+    /* Dark Theme Variables */
+    --dark-primary-color: #c8a96e;
+    --dark-secondary-color: #454d55;
+    --dark-background-color: #121212;
+    --dark-text-color: #eaeaea;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.navbar a:hover {
+    opacity: 0.8;
+}
+
+.theme-toggle {
+    cursor: pointer;
+    padding: 0.5rem;
+    border: none;
+    background: none;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+/* Dark Theme Styles */
+body[data-theme='dark'] {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+}
+
+.navbar[data-theme='dark'] {
+    background-color: var(--dark-primary-color);
+}
+
+button[data-theme='dark'] {
+    background-color: var(--dark-primary-color);
+}
+
+button[data-theme='dark']:hover {
+    background-color: darken(var(--dark-primary-color), 10%);
+}
+
+/* Transitions */
+*, *::before, *::after {
+    transition: all 0.3s ease;
+}
