@@ -1,0 +1,211 @@
+:root {
+  --bg: #0e0e0e;
+  --surface: #161616;
+  --border: #2a2a2a;
+  --accent: #c8a96e;
+  --accent-dim: rgba(200, 169, 110, 0.12);
+  --text: #f0ede8;
+  --muted: #7a7570;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  padding: 0 24px 80px;
+  overflow-x: hidden;
+}
+
+/* ---- hero ---- */
+.hero {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 0 60px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 36px;
+  align-items: center;
+  animation: fadeDown 0.7s ease both;
+}
+
+.hero-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.hero-text { display: flex; flex-direction: column; gap: 10px; }
+
+.label {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.role-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  border: 1px solid var(--accent);
+  padding: 4px 12px;
+  border-radius: 2px;
+  width: fit-content;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 300;
+  max-width: 480px;
+  line-height: 1.7;
+}
+
+/* ---- divider ---- */
+.divider {
+  max-width: 900px;
+  margin: 0 auto 48px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
+  animation: fadeDown 0.7s 0.2s ease both;
+}
+
+/* ---- sections ---- */
+.sections {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 28px 24px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards;
+  transition: border-color 0.3s;
+}
+
+.section:nth-child(1) { animation-delay: 0.35s; }
+.section:nth-child(2) { animation-delay: 0.5s; }
+.section:nth-child(3) { animation-delay: 0.65s; grid-column: 1 / -1; }
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.section:hover { border-color: var(--accent); }
+.section:hover::before { opacity: 1; }
+
+.section-title {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* skills list */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  font-size: 0.8rem;
+  color: var(--text);
+  background: var(--accent-dim);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  padding: 4px 12px;
+  font-weight: 300;
+}
+
+/* about text */
+.about-text {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* contacts */
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+.contact-item .contact-label {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  width: 80px;
+  flex-shrink: 0;
+}
+
+/* ---- responsive ---- */
+@media (max-width: 600px) {
+  .hero { grid-template-columns: 1fr; }
+  .sections { grid-template-columns: 1fr; }
+  .section:nth-child(3) { grid-column: auto; }
+}
+
+/* ---- animations ---- */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
