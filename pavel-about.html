@@ -1,75 +1,148 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Про мене</title>
+    <title>Павло Буйлін | Про себе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="shared-styles.css" />
     <link rel="stylesheet" href="pavel-about.css" />
+    <script src="script.js" defer></script>
   </head>
-  <body>
-    <div class="hero">
-      <div class="hero-avatar">ПБ</div>
-      <div class="hero-text">
-        <span class="label">Про мене</span>
-        <h1>Павло Буйлін</h1>
-        <span class="role-badge">Frontend-розробник</span>
-        <p class="tagline">
-          Створюю інтерфейси, які працюють швидко і виглядають добре. Люблю
-          чистий код та продуманий UX.
-        </p>
-      </div>
-    </div>
+  <body data-page="pavel">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container navbar">
+          <a class="brand" href="index.html" aria-label="На головну">
+            <span class="brand-mark">OT</span>
+            <span class="brand-copy">
+              <span class="brand-title">Our Team</span>
+              <span class="brand-subtitle">Collaborative Studio</span>
+            </span>
+          </a>
 
-    <div class="divider"></div>
+          <button class="nav-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false">
+            <span class="nav-toggle-line"></span>
+          </button>
 
-    <div class="sections">
-      <div class="section">
-        <div class="section-title">Мої навички</div>
-        <div class="skills">
-          <span class="skill-tag">HTML / CSS</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">TypeScript</span>
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">Next JS</span>
-          <span class="skill-tag">Git</span>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="section-title">Контакти</div>
-        <div class="contacts">
-          <div class="contact-item">
-            <span class="contact-label">Email</span>
-            pavlo.builin@nure.ua
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Telegram</span>
-            @PavelBuylin
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">GitHub</span>
-            github.com/PavelBuylin
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Місто</span>
-            Кривий Ріг
+          <div class="nav-actions" data-nav-menu>
+            <nav class="nav-menu" aria-label="Основна навігація">
+              <a class="nav-link" href="index.html">Головна</a>
+              <a class="nav-link" href="index.html#overview">Про проєкт</a>
+              <a class="nav-link" href="index.html#team">Команда</a>
+              <a class="nav-link" href="dmitry-about.html">Дмитро</a>
+              <a class="nav-link" href="pavel-about.html">Павло</a>
+              <a class="nav-link" href="volodymyr-about.html">Володимир</a>
+            </nav>
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Перемкнути тему">
+              <span class="theme-toggle-icon" data-theme-icon>◐</span>
+              <span class="theme-toggle-label" data-theme-label>Темна тема</span>
+            </button>
           </div>
         </div>
-      </div>
+      </header>
 
-      <div class="section">
-        <div class="section-title">Про себе</div>
-        <p class="about-text">
-          Займаюсь фронтенд-розробкою вже 2.5 роки. Починав із верстки
-          лендингів, зараз працюю над великими додатками у команді. Ціную чисту
-          архітектуру, зрозумілий код та увагу до деталей. У вільний час вивчаю
-          анімації та веб-продуктивність.
-        </p>
-      </div>
+      <main class="page-main">
+        <div class="container stack">
+          <section class="about-hero">
+            <article class="profile-summary profile-summary--pavel section-card">
+              <span class="eyebrow">Про мене</span>
+              <div class="avatar">ПБ</div>
+              <h1 class="profile-title">Павло Буйлін</h1>
+              <div class="role-chip">Frontend-розробник</div>
+              <p class="lead">
+                Створюю інтерфейси, які працюють швидко, виглядають чисто і залишаються зручними в розвитку.
+                Люблю продуманий UX, зрозумілу архітектуру та увагу до деталей.
+              </p>
+              <div class="button-row">
+                <a class="button" href="index.html#team">До команди</a>
+                <a class="button-secondary" href="mailto:pavlo.builin@nure.ua">Написати</a>
+              </div>
+            </article>
+
+            <aside class="profile-card content-card">
+              <span class="eyebrow">Контакти</span>
+              <div class="detail-list">
+                <div class="detail-item">
+                  <span class="detail-label">Email</span>
+                  <span class="detail-value">pavlo.builin@nure.ua</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Telegram</span>
+                  <span class="detail-value">@PavelBuylin</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">GitHub</span>
+                  <span class="detail-value">github.com/PavelBuylin</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Місто</span>
+                  <span class="detail-value">Кривий Ріг</span>
+                </div>
+              </div>
+            </aside>
+          </section>
+
+          <section class="content-grid">
+            <article class="profile-card content-card">
+              <span class="eyebrow">Навички</span>
+              <h3>Технології та напрямки</h3>
+              <div class="pill-list mt-18">
+                <span class="pill">HTML / CSS</span>
+                <span class="pill">JavaScript</span>
+                <span class="pill">TypeScript</span>
+                <span class="pill">React</span>
+                <span class="pill">Next.js</span>
+                <span class="pill">Git</span>
+              </div>
+            </article>
+
+            <article class="profile-card content-card">
+              <span class="eyebrow">Роль у команді</span>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <strong>Frontend engineering</strong>
+                  Працюю над інтерфейсами, які мають виглядати охайно, працювати швидко і легко підтримуватись.
+                </div>
+                <div class="timeline-item">
+                  <strong>Продуманий UX</strong>
+                  Звертаю увагу не тільки на верстку, а й на те, як користувач сприймає структуру та навігацію.
+                </div>
+                <div class="timeline-item">
+                  <strong>Якість реалізації</strong>
+                  Ціную чистий код, зрозумілу композицію компонентів і акуратну подачу деталей.
+                </div>
+              </div>
+            </article>
+
+            <article class="profile-card content-card span-full">
+              <span class="eyebrow">Про себе</span>
+              <h3>Короткий профіль</h3>
+              <p>
+                Займаюсь фронтенд-розробкою вже 2.5 роки. Починав із верстки лендингів, зараз працюю над більшими
+                додатками у команді. Ціную чисту архітектуру, зрозумілий код та увагу до деталей. У вільний час
+                вивчаю анімації, продуктивність інтерфейсів і способи робити вебдосвід ще кращим.
+              </p>
+            </article>
+          </section>
+        </div>
+      </main>
+
+      <footer class="page-footer">
+        <div class="container footer-card">
+          <div class="footer-copy">Профіль учасника команди в єдиній дизайн-системі сайту.</div>
+          <div class="footer-links">
+            <a href="index.html">Головна</a>
+            <a href="dmitry-about.html">Профіль Дмитра</a>
+            <a href="volodymyr-about.html">Профіль Володимира</a>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

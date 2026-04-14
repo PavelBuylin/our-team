@@ -62,6 +62,7 @@
       const isActive =
         (currentPage === "home" && href === "index.html") ||
         (currentPage === "dmitry" && href === "dmitry-about.html") ||
+        (currentPage === "pavel" && href === "pavel-about.html") ||
         (currentPage === "volodymyr" && href === "volodymyr-about.html");
 
       if (isActive) {
