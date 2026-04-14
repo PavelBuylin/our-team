@@ -1,76 +1,146 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Про мене</title>
+    <title>Володимир Чорнобук | Про себе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="shared-styles.css" />
     <link rel="stylesheet" href="volodymyr-about.css" />
+    <script src="script.js" defer></script>
   </head>
-  <body>
-    <div class="hero">
-      <div class="hero-avatar">ЧВ</div>
-      <div class="hero-text">
-        <span class="label">Про мене</span>
-        <h1>Володимир Чорнобук</h1>
-        <span class="role-badge">mobile developer, junior project manager</span>
-        <p class="tagline">
-          Створюю інтуїтивні та привабливі мобільні додатки, які покращують життя користувачів. 
-          Маю досвід у розробці на kotlin та управлінні проектами, 
-          що дозволяє ефективно поєднувати технічні навички з організаційними здібностями. 
-          Завжди прагну до вдосконалення та готовий до нових викликів у світі мобільної розробки.
-        </p>
-      </div>
-    </div>
+  <body data-page="volodymyr">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container navbar">
+          <a class="brand" href="index.html" aria-label="На головну">
+            <span class="brand-mark">OT</span>
+            <span class="brand-copy">
+              <span class="brand-title">Our Team</span>
+              <span class="brand-subtitle">Collaborative Studio</span>
+            </span>
+          </a>
 
-    <div class="divider"></div>
+          <button class="nav-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false">
+            <span class="nav-toggle-line"></span>
+          </button>
 
-    <div class="sections">
-      <div class="section">
-        <div class="section-title">Мої навички</div>
-        <div class="skills">
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">kotlin</span>
-          <span class="skill-tag">Django</span>
-          <span class="skill-tag">Git</span>
-        </div>
-      </div>
-
-      <div class="section">
-        <div class="section-title">Контакти</div>
-        <div class="contacts">
-          <div class="contact-item">
-            <span class="contact-label">Email</span>
-            volodymyr.chornobuk@nure.ua
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Telegram</span>
-            @VolodymyrChornobuk
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">GitHub</span>
-            github.com/ChornobukVV
-          </div>
-          <div class="contact-item">
-            <span class="contact-label">Місто</span>
-            Ромни, Україна
+          <div class="nav-actions" data-nav-menu>
+            <nav class="nav-menu" aria-label="Основна навігація">
+              <a class="nav-link" href="index.html">Головна</a>
+              <a class="nav-link" href="index.html#overview">Про проєкт</a>
+              <a class="nav-link" href="index.html#team">Команда</a>
+              <a class="nav-link" href="dmitry-about.html">Дмитро</a>
+              <a class="nav-link" href="volodymyr-about.html">Володимир</a>
+            </nav>
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Перемкнути тему">
+              <span class="theme-toggle-icon" data-theme-icon>◐</span>
+              <span class="theme-toggle-label" data-theme-label>Темна тема</span>
+            </button>
           </div>
         </div>
-      </div>
+      </header>
 
-      <div class="section">
-        <div class="section-title">Про себе</div>
-        <p class="about-text">
-          Я - молодий та амбіційний розробник мобільних додатків з пристрастю до створення інтуїтивних та привабливих користувацьких інтерфейсів. 
-          Мій досвід включає розробку на kotlin, що дозволяє мені створювати ефективні та надійні мобільні рішення. 
-          Крім того, я маю навички управління проектами, що допомагає мені ефективно координувати роботу команди та забезпечувати успішне виконання проектів. 
-          Я прагну до покращення навичок в управлінні проектами та стати ефективним лідером, який може надихати та підтримувати свою команду.
-          
-        </p>
-      </div>
+      <main class="page-main">
+        <div class="container stack">
+          <section class="about-hero">
+            <article class="profile-summary profile-summary--volodymyr section-card">
+              <span class="eyebrow">Про мене</span>
+              <div class="avatar">ЧВ</div>
+              <h1 class="profile-title">Володимир Чорнобук</h1>
+              <div class="role-chip">Mobile developer, junior project manager</div>
+              <p class="lead">
+                Створюю мобільні рішення, які поєднують технічну надійність, зручний досвід користувача і ясну
+                організацію процесу всередині команди.
+              </p>
+              <div class="button-row">
+                <a class="button" href="index.html#team">До команди</a>
+                <a class="button-secondary" href="mailto:volodymyr.chornobuk@nure.ua">Написати</a>
+              </div>
+            </article>
+
+            <aside class="profile-card content-card">
+              <span class="eyebrow">Контакти</span>
+              <div class="detail-list">
+                <div class="detail-item">
+                  <span class="detail-label">Email</span>
+                  <span class="detail-value">volodymyr.chornobuk@nure.ua</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Telegram</span>
+                  <span class="detail-value">@VolodymyrChornobuk</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">GitHub</span>
+                  <span class="detail-value">github.com/ChornobukVV</span>
+                </div>
+                <div class="detail-item">
+                  <span class="detail-label">Місто</span>
+                  <span class="detail-value">Ромни, Україна</span>
+                </div>
+              </div>
+            </aside>
+          </section>
+
+          <section class="content-grid">
+            <article class="profile-card content-card">
+              <span class="eyebrow">Навички</span>
+              <h3>Технології та компетенції</h3>
+              <div class="pill-list mt-18">
+                <span class="pill">Python</span>
+                <span class="pill">Kotlin</span>
+                <span class="pill">Django</span>
+                <span class="pill">Git</span>
+                <span class="pill">Project management</span>
+              </div>
+            </article>
+
+            <article class="profile-card content-card">
+              <span class="eyebrow">Роль у команді</span>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <strong>Mobile development</strong>
+                  Працюю з мобільною розробкою та створенням інтуїтивних інтерфейсів для користувачів.
+                </div>
+                <div class="timeline-item">
+                  <strong>Координація процесу</strong>
+                  Поєдную технічне бачення з організаційними навичками, щоб команда рухалась у спільному темпі.
+                </div>
+                <div class="timeline-item">
+                  <strong>Постійний розвиток</strong>
+                  Прагну покращувати і технічну експертизу, і лідерські навички для сильнішої командної роботи.
+                </div>
+              </div>
+            </article>
+
+            <article class="profile-card content-card span-full">
+              <span class="eyebrow">Про себе</span>
+              <h3>Профіль учасника</h3>
+              <p>
+                Я молодий та амбіційний розробник мобільних додатків з пристрастю до створення інтуїтивних та
+                привабливих користувацьких інтерфейсів. Мій досвід включає розробку на Kotlin і навички управління
+                проєктами, що допомагає ефективно координувати роботу команди та забезпечувати успішне виконання
+                спільних задач.
+              </p>
+            </article>
+          </section>
+        </div>
+      </main>
+
+      <footer class="page-footer">
+        <div class="container footer-card">
+          <div class="footer-copy">Профіль учасника команди в єдиній дизайн-системі сайту.</div>
+          <div class="footer-links">
+            <a href="index.html">Головна</a>
+            <a href="dmitry-about.html">Профіль Дмитра</a>
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

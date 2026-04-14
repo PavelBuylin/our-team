@@ -1,51 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Team</title>
-    <link rel="stylesheet" href="styles.css">
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Team | Командний проєкт</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="shared-styles.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">My Logo</div>
-            <ul class="nav-links">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#why-choose-us">Why Choose Us</a></li>
-                <li><a href="#team">Team Members</a></li>
-                <li><a href="#features">Key Features</a></li>
-            </ul>
-            <button class="theme-toggle">Toggle Theme</button>
-        </nav>
-        <h1>Welcome to Our Team</h1>
-        <p>Your success is our mission. Learn more about us!</p>
-    </header>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are a dedicated team committed to excellence.</p>
-    </section>
-    <section id="why-choose-us">
-        <h2>Why Choose Us</h2>
-        <p>Discover the advantages of working with our team.</p>
-    </section>
-    <section id="team">
-        <h2>Team Members</h2>
-        <div class="team-cards">
-            <!-- Existing team member cards go here -->
+  </head>
+  <body data-page="home">
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container navbar">
+          <a class="brand" href="index.html" aria-label="На головну">
+            <span class="brand-mark">OT</span>
+            <span class="brand-copy">
+              <span class="brand-title">Our Team</span>
+              <span class="brand-subtitle">Collaborative Studio</span>
+            </span>
+          </a>
+
+          <button class="nav-toggle" type="button" aria-label="Відкрити меню" aria-expanded="false">
+            <span class="nav-toggle-line"></span>
+          </button>
+
+          <div class="nav-actions" data-nav-menu>
+            <nav class="nav-menu" aria-label="Основна навігація">
+              <a class="nav-link" href="index.html">Головна</a>
+              <a class="nav-link" href="index.html#overview">Про проєкт</a>
+              <a class="nav-link" href="index.html#team">Команда</a>
+              <a class="nav-link" href="dmitry-about.html">Дмитро</a>
+              <a class="nav-link" href="volodymyr-about.html">Володимир</a>
+            </nav>
+            <button class="theme-toggle" type="button" data-theme-toggle aria-label="Перемкнути тему">
+              <span class="theme-toggle-icon" data-theme-icon>◐</span>
+              <span class="theme-toggle-label" data-theme-label>Темна тема</span>
+            </button>
+          </div>
         </div>
-    </section>
-    <section id="features">
-        <h2>Key Features</h2>
-        <p>Explore features that set us apart.</p>
-    </section>
-    <section id="cta">
-        <h2>Get in Touch</h2>
-        <button class="cta-button">Contact Us</button>
-    </section>
-    <footer>
-        <p>&copy; 2026 My Company. All Rights Reserved.</p>
-    </footer>
-</body>
+      </header>
+
+      <main class="page-main">
+        <div class="container stack">
+          <section class="home-hero">
+            <article class="hero-panel hero-panel--primary section-card">
+              <span class="hero-kicker">Команда, що збирає продукт в єдину систему</span>
+              <h1>Розробляємо сучасний інтерфейс, який виглядає цілісно на кожній сторінці.</h1>
+              <p class="hero-description">
+                Ми об'єднали frontend, mobile та координацію процесу в одну компактну команду. Фокусуємось на
+                чистій структурі, адаптивному UI та акуратному впровадженні змін без втрати наявної логіки.
+              </p>
+              <div class="button-row">
+                <a class="button" href="#team">Переглянути команду</a>
+                <a class="button-secondary" href="#contact">Обговорити співпрацю</a>
+              </div>
+              <div class="hero-highlights">
+                <div class="highlight-card">
+                  <strong>Єдиний стиль</strong>
+                  <span class="muted">Одна візуальна система для всіх сторінок сайту.</span>
+                </div>
+                <div class="highlight-card">
+                  <strong>Адаптивність</strong>
+                  <span class="muted">Зручна навігація та читабельний layout на мобільних.</span>
+                </div>
+                <div class="highlight-card">
+                  <strong>Обережні зміни</strong>
+                  <span class="muted">Покращення інтерфейсу без зайвого втручання в логіку.</span>
+                </div>
+              </div>
+            </article>
+
+            <aside class="hero-panel hero-panel--secondary">
+              <div class="spotlight-card content-card">
+                <span class="eyebrow">Коротко про проєкт</span>
+                <h3>Невеликий командний сайт із персональними сторінками учасників</h3>
+                <p>
+                  Оновлення фокусується на чистій архітектурі HTML/CSS, спільній навігації, повторному використанні
+                  стилів і приємному першому враженні.
+                </p>
+              </div>
+              <div class="spotlight-card content-card">
+                <span class="eyebrow">Що ми покриваємо</span>
+                <div class="spotlight-list">
+                  <div class="spotlight-item">
+                    <span class="spotlight-badge">01</span>
+                    <div>
+                      <h3>Візуальна цілісність</h3>
+                      <p>Секції, картки, кнопки та типографіка працюють як одна система.</p>
+                    </div>
+                  </div>
+                  <div class="spotlight-item">
+                    <span class="spotlight-badge">02</span>
+                    <div>
+                      <h3>Спільна навігація</h3>
+                      <p>Navbar, активна сторінка, мобільне меню та перемикач теми на всіх основних сторінках.</p>
+                    </div>
+                  </div>
+                  <div class="spotlight-item">
+                    <span class="spotlight-badge">03</span>
+                    <div>
+                      <h3>Теми оформлення</h3>
+                      <p>Світла і темна тема із збереженням вибору користувача.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </section>
+
+          <section id="overview" class="section-shell">
+            <div class="section-head">
+              <span class="eyebrow">Про проєкт</span>
+              <h2 class="section-title">Сайт, який презентує команду зрозуміло, охайно й професійно.</h2>
+              <p class="section-description">
+                Головна сторінка пояснює, хто ми, як працюємо і чому нам можна довірити реалізацію інтерфейсу.
+                Персональні сторінки підсилюють це враження та залишаються частиною одного цілісного продукту.
+              </p>
+            </div>
+            <div class="project-story">
+              <article class="story-card content-card">
+                <h3>Наша мета</h3>
+                <p>
+                  Показати команду не просто як список імен, а як злагоджений набір ролей із чітким внеском у
+                  проєкт. Тому інтерфейс побудовано навколо структури, довіри та помітних точок взаємодії.
+                </p>
+                <div class="pill-list mt-18">
+                  <span class="pill">Сучасний UI</span>
+                  <span class="pill">Responsive layout</span>
+                  <span class="pill">Reusable styles</span>
+                  <span class="pill">Theme switch</span>
+                </div>
+              </article>
+              <div class="grid">
+                <div class="metric">
+                  <span class="metric-value">3</span>
+                  <span class="metric-label">Основні сторінки з єдиним Navbar</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">2</span>
+                  <span class="metric-label">Теми оформлення для комфортного перегляду</span>
+                </div>
+                <div class="metric">
+                  <span class="metric-value">100%</span>
+                  <span class="metric-label">Фокус на збереженні поточної функціональності</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section-shell">
+            <div class="section-head">
+              <span class="eyebrow">Основні можливості</span>
+              <h2 class="section-title">Інтерфейс побудований так, щоб сайт одразу відчувався завершеним.</h2>
+            </div>
+            <div class="grid grid-3">
+              <article class="info-card feature-item">
+                <h3>Чітка інформаційна ієрархія</h3>
+                <p>Ключові блоки на головній сторінці розкривають суть проєкту без перевантаження деталями.</p>
+              </article>
+              <article class="info-card feature-item">
+                <h3>Уніфіковані about-сторінки</h3>
+                <p>Персональні профілі виглядають частиною одного продукту, але зберігають індивідуальність.</p>
+              </article>
+              <article class="info-card feature-item">
+                <h3>Зручна мобільна взаємодія</h3>
+                <p>Navbar, секції, картки та кнопки адаптуються до менших екранів без втрати зручності.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="section-shell">
+            <div class="section-head">
+              <span class="eyebrow">Чому обрати нас</span>
+              <h2 class="section-title">Ми поєднуємо дизайн-мислення, технічну акуратність і командну синхронність.</h2>
+            </div>
+            <div class="grid grid-3">
+              <article class="info-card why-item">
+                <h3>Працюємо системно</h3>
+                <p>Спільні компоненти та стилі спрощують подальший розвиток сайту й зменшують дублювання.</p>
+              </article>
+              <article class="info-card why-item">
+                <h3>Думаємо про підтримку</h3>
+                <p>Чисті файли, зрозуміла структура секцій і логічні CSS-рівні роблять проєкт зручнішим у супроводі.</p>
+              </article>
+              <article class="info-card why-item">
+                <h3>Не ламаємо існуюче</h3>
+                <p>Усі зміни спрямовані на покращення UX без видалення важливого коду чи ризикованих переробок.</p>
+              </article>
+            </div>
+          </section>
+
+          <section id="team" class="section-shell">
+            <div class="section-head">
+              <span class="eyebrow">Команда</span>
+              <h2 class="section-title">Кожен учасник підсилює продукт зі свого боку.</h2>
+              <p class="section-description">
+                Окремі сторінки з профілями дають більше контексту про ролі, навички та контактну інформацію учасників.
+              </p>
+            </div>
+            <div class="team-grid">
+              <article class="team-card content-card">
+                <div class="team-top">
+                  <div class="team-avatar">ДВ</div>
+                  <div>
+                    <h3>Дмитро Войтков</h3>
+                    <div class="team-role">Frontend-розробник</div>
+                  </div>
+                </div>
+                <p>
+                  Працює з інтерфейсами, адаптивністю та фронтенд-структурою. Орієнтується на чисту реалізацію і
+                  зручність користування.
+                </p>
+                <div class="team-meta">
+                  <span>React</span>
+                  <span>TypeScript</span>
+                  <span>Java</span>
+                </div>
+                <a class="button-secondary" href="dmitry-about.html">Відкрити профіль</a>
+              </article>
+
+              <article class="team-card content-card">
+                <div class="team-top">
+                  <div class="team-avatar">ЧВ</div>
+                  <div>
+                    <h3>Володимир Чорнобук</h3>
+                    <div class="team-role">Mobile developer, junior project manager</div>
+                  </div>
+                </div>
+                <p>
+                  Поєднує технічну реалізацію мобільних рішень із координацією процесів, щоб команда рухалась
+                  узгоджено й стабільно.
+                </p>
+                <div class="team-meta">
+                  <span>Kotlin</span>
+                  <span>Django</span>
+                  <span>Project management</span>
+                </div>
+                <a class="button-secondary" href="volodymyr-about.html">Відкрити профіль</a>
+              </article>
+            </div>
+          </section>
+
+          <section id="contact" class="section-shell">
+            <div class="cta-banner section-card">
+              <span class="eyebrow">Call to action</span>
+              <h2>Потрібен охайний сучасний інтерфейс у єдиному стилі?</h2>
+              <p>
+                Ми вже зібрали базу: спільну навігацію, адаптивний layout, теми оформлення та структуровану подачу
+                інформації. Наступний крок легко масштабувати під нові сторінки й розділи.
+              </p>
+              <div class="button-row">
+                <a class="button" href="mailto:team@example.com">Написати команді</a>
+                <a class="button-secondary" href="#overview">Переглянути деталі</a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="page-footer">
+        <div class="container footer-card">
+          <div class="footer-copy">© 2026 Our Team. Сучасний командний сайт із єдиним UI-стилем.</div>
+          <div class="footer-links">
+            <a href="index.html">Головна</a>
+            <a href="dmitry-about.html">Дмитро</a>
+            <a href="volodymyr-about.html">Володимир</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
